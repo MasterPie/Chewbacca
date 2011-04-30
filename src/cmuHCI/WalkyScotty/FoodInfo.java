@@ -5,6 +5,10 @@ import java.io.IOException;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
+import android.text.style.URLSpan;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -90,6 +94,19 @@ public class FoodInfo extends WSActivity{
         nick.setText(loc.getAbbreviation());
         
         TextView hours = (TextView) findViewById(R.id.FoodHours);
+        hours.setText(loc.getHours());
+        
+        TextView menu = (TextView) findViewById(R.id.FoodMenu);
+        if(loc.getMenu_link() != null && !loc.getMenu_link().equals("")){
+	        SpannableString ss = new SpannableString("Menu");
+	        ss.setSpan(new URLSpan(loc.getMenu_link()), 0, 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+	        menu.setText(ss);
+	        menu.setMovementMethod(LinkMovementMethod.getInstance());
+        }
+        else
+        	menu.setText("No menu available.");
+        
+        
         hours.setText(loc.getHours());
         
         TextView crumb = (TextView) findViewById(R.id.bakerinfo_breadcrumb_building);

@@ -33,8 +33,8 @@ public class ShuttleInfo extends WSActivity{
         photo.setImageDrawable(myImage);
         
         // Set title of the description
-        TextView desc = (TextView) findViewById(R.id.BakerHallDes);
-        desc.setText(R.string.BakerDes);
+       /* TextView desc = (TextView) findViewById(R.id.BakerHallDes);
+        desc.setText(R.string.BakerDes);*/
         
         loadDetails(getIntent().getIntExtra("lID", 1));
         
@@ -85,11 +85,11 @@ public class ShuttleInfo extends WSActivity{
 		TextView title = (TextView) findViewById(R.id.BakerHallText);
 		title.setText(loc.getName());
 		
-		TextView desc = (TextView) findViewById(R.id.BakerHallDes);
+		/*TextView desc = (TextView) findViewById(R.id.BakerHallDes);
         desc.setText(loc.getDescription());
         
         TextView nick = (TextView) findViewById(R.id.BuildingNick);
-        nick.setText(loc.getAbbreviation());
+        nick.setText(loc.getAbbreviation());*/
         
         TextView hours = (TextView) findViewById(R.id.FoodHours);
         hours.setText(loc.getHours());

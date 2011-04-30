@@ -221,13 +221,24 @@ public class SearchActivity extends WSActivity {
 		adp.openDataBase();
 		
 		int i=0;
-		for(Building b:adp.getBuildings()){
+		/*for(Building b: adp.getBuildings()){
 			if(i>= 3) break;
 			SUBPLACES[0][i] = b.getName();
 			LOCATIONS[0][i] = b;
 			i++;
-		}
-		SUBPLACES[0][i] = "More...";
+		}*/
+		Building b = adp.getBuilding(1);
+		SUBPLACES[0][0] = b.getName();
+		LOCATIONS[0][0] = b;
+		b = adp.getBuilding(6);
+		SUBPLACES[0][1] = b.getName();
+		LOCATIONS[0][1] = b;
+		b = adp.getBuilding(2);
+		SUBPLACES[0][2] = b.getName();
+		LOCATIONS[0][2] = b;
+		SUBPLACES[0][3] = "More...";
+		
+		/*
 		i=0;
 		for(Restaurant r:adp.getRestaurants()){
 			if(i>= 3) break;
@@ -235,15 +246,40 @@ public class SearchActivity extends WSActivity {
 			LOCATIONS[1][i] = r;
 			i++;
 		}
-		SUBPLACES[1][i] = "More...";
+		
+		*/
+		Restaurant r = adp.getRestaurant(37);
+		SUBPLACES[1][0] = r.getName();
+		LOCATIONS[1][0] = r;
+		r = adp.getRestaurant(25);
+		SUBPLACES[1][1] = r.getName();
+		LOCATIONS[1][1] = r;
+		r = adp.getRestaurant(39);
+		SUBPLACES[1][2] = r.getName();
+		LOCATIONS[1][2] = r;
+		SUBPLACES[1][3] = "More...";
+		
+		/*
 		i=0;
-		for(Room r:adp.getRooms()){
+		for(Room h:adp.getRooms()){
 			if(i>= 3) break;
-			SUBPLACES[2][i] = r.getName();
-			LOCATIONS[2][i] = r;
+			SUBPLACES[2][i] = h.getName();
+			LOCATIONS[2][i] = h;
 			i++;
 		}
-		SUBPLACES[2][i] = "More...";
+		*/
+		
+		Room h = adp.getRoom(126);
+		SUBPLACES[2][0] = h.getName();
+		LOCATIONS[2][0] = h;
+		h = adp.getRoom(114);
+		SUBPLACES[2][1] = h.getName();
+		LOCATIONS[2][1] = h;
+		h = adp.getRoom(120);
+		SUBPLACES[2][2] = h.getName();
+		LOCATIONS[2][2] = h;
+		SUBPLACES[2][3] = "More...";
+		
 		i=0;
 		for(Service s:adp.getServices()){
 			if(i>= 3) break;
@@ -252,6 +288,7 @@ public class SearchActivity extends WSActivity {
 			i++;
 		}
 		SUBPLACES[3][i] = "More...";
+		
 		i=0;
 		for(Location e:adp.getOther()){
 			if(i>= 3) break;

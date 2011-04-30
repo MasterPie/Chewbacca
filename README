@@ -1,7 +1,5 @@
-Grouping
-Grid
-Fonts, Colors
-Headings / Titles
-Buttons on Map screen, or make a main screen?
-
-Map: Current location, better start and end pins, pin for last building 
+All pages with Directions/Nearby at the bottom
+Lists still have small font size
+Crash when Services pages (has to do with referencing a resource string on the page)
+Shuttles need hours
+Images need to be correct

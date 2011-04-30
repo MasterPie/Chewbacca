@@ -16,19 +16,23 @@
   		android:layout_height="wrap_content"
   		android:stretchColumns="1"
   		android:shrinkColumns="0">
-  		<TableRow android:layout_height="130dp">
+  		<TableRow android:layout_height="150dp">
 			<ImageView android:id="@+id/BakerHallPhoto" android:scaleType="fitStart"
-				android:layout_width="130dp" android:layout_height="100dp"/>
+				android:layout_width="190dp" android:layout_height="150dp"/>
 			<LinearLayout style="@style/myLLayout_ImgDetails" android:paddingLeft="10dp" android:paddingTop="0dp">
 				<TextView android:id="@+id/BuildingNickTitle" style="@style/label" android:text="@string/info_alternative_name"/>
 				<TextView android:id="@+id/BuildingNick" style="@style/description"/>
-				<TextView android:id="@+id/FoodMenuTitle" style="@style/label" android:text="@string/food_menu_title"/>
-				<TextView android:id="@+id/FoodMenu" style="@style/description"/>
+				<TextView android:id="@+id/FoodHoursTitle" style="@style/subtitle" android:text="@string/FoodHoursTitle"/>
+				<ScrollView android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+				<TextView android:id="@+id/FoodHours" style="@style/description"/>
+				
+				</ScrollView>
 			</LinearLayout>
 		</TableRow>
 	</TableLayout>
-	<TextView android:id="@+id/FoodHoursTitle" style="@style/subtitle" android:text="@string/FoodHoursTitle"/>
-	<TextView android:id="@+id/FoodHours" style="@style/description"/>
+	<TextView android:id="@+id/FoodMenuTitle" style="@style/label" android:text="@string/food_menu_title"/>
+				<TextView android:id="@+id/FoodMenu" style="@style/description"/>
 	<TextView android:id="@+id/BakerHallDetailsText" style="@style/subtitle" android:text="@string/BakerHallDetailsText"/>
 	<ScrollView android:layout_width="fill_parent"
 		android:layout_height="wrap_content" android:layout_weight="1">
@@ -39,7 +43,7 @@
 	</ScrollView>
 
 
-	<LinearLayout style="@style/myLLayout_Buttons">
+	<LinearLayout style="@style/myLLayout_Buttons" android:layout_weight="0" android:layout_height="wrap_content" android:layout_width="fill_parent">
 		<Button android:id="@+id/BakerHall_Direction_Button"
 			android:text="@string/directions_btn" style="@style/myButton" />
 		<Button android:id="@+id/BakerHall_Nearby_Button" android:text="@string/nearby_btn"
