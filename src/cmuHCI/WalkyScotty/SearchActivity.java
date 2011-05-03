@@ -29,7 +29,7 @@ import cmuHCI.WalkyScotty.entities.Room;
 import cmuHCI.WalkyScotty.entities.Service;
 
 public class SearchActivity extends WSActivity {
-	private final String[] PLACES = { "Buildings", "Food Places", "Rooms",
+	private final String[] PLACES = { "Buildings", "Restaurants", "Rooms",
 			"Services", "Other" };
 	
 	private String[][] SUBPLACES = new String[5][4];
