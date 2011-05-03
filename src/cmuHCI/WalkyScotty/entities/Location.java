@@ -41,7 +41,7 @@ public class Location implements Comparable<Location>{
 	}
 
 	public String getAbbreviation() {
-		if(abbreviation == null || abbreviation.equals(""))
+		if(abbreviation == null || abbreviation.trim().equals("") || abbreviation.trim().equals(" "))
 			return "No alternative names";
 		return abbreviation;
 	}
@@ -53,13 +53,13 @@ public class Location implements Comparable<Location>{
 	public String getName() {
 		if(name == null)
 			return "";
-		return name;
+		return name.trim();
 	}
 
 	public String getDescription() {
 		if(description == null)
 			return "";
-		return description;
+		return description.trim();
 	}
 
 	public String getImg() {

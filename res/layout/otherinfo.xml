@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
 		android:orientation="vertical">
 	
 		<LinearLayout style="@style/breadcrumbLL">
@@ -24,7 +24,7 @@
 				<TextView android:id="@+id/BuildingNickTitle" style="@style/label" android:text="@string/info_alternative_name"/>
 				<TextView android:id="@+id/BuildingNick" style="@style/description"/>
 				<TextView android:id="@+id/TelTitle" style="@style/subtitle" android:text="@string/tel_title"/>
-				<TextView android:id="@+id/Tele" style="@style/description" android:autoLink="all"/>	
+				<TextView android:id="@+id/TeleDesc" style="@style/description" android:autoLink="all"/>	
 			</LinearLayout>
 		</TableRow>
 	</TableLayout>
@@ -37,7 +37,7 @@
 				android:layout_width="fill_parent" android:layout_height="wrap_content" />
 	
 		</ScrollView>
-		<LinearLayout style="@style/myLLayout_Buttons">
+		<LinearLayout style="@style/myLLayout_Buttons" android:layout_weight="0" android:layout_height="wrap_content" android:layout_width="fill_parent">
 		<Button android:id="@+id/BakerHall_Direction_Button"
 			android:text="@string/directions_btn" style="@style/myButton" />
 		<Button android:id="@+id/BakerHall_Nearby_Button" android:text="@string/nearby_btn"

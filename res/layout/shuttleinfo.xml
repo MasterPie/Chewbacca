@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	android:orientation="vertical">
 
 	<LinearLayout style="@style/breadcrumbLL">
@@ -23,7 +23,10 @@
 				<TextView android:id="@+id/BuildingNickTitle" style="@style/label" android:text="@string/info_alternative_name"/>
 				<TextView android:id="@+id/BuildingNick" style="@style/description"/>
 				<TextView android:id="@+id/FoodHoursTitle" style="@style/subtitle" android:text="@string/FoodHoursTitle"/>
-				<TextView android:id="@+id/FoodHours" style="@style/description"/>
+				<ScrollView android:layout_width="fill_parent"
+		android:layout_height="wrap_content">
+					<TextView android:id="@+id/FoodHours" style="@style/description"/>
+					</ScrollView>
 			</LinearLayout>
 		</TableRow>
 	</TableLayout>
@@ -42,7 +45,7 @@
 	</ScrollView>
 
 
-	<LinearLayout style="@style/myLLayout_Buttons">
+	<LinearLayout style="@style/myLLayout_Buttons" android:layout_weight="0" android:layout_height="wrap_content" android:layout_width="fill_parent">
 		<Button android:id="@+id/BakerHall_Direction_Button"
 			android:text="@string/directions_btn" style="@style/myButton" />
 		<Button android:id="@+id/BakerHall_Nearby_Button" android:text="@string/nearby_btn"

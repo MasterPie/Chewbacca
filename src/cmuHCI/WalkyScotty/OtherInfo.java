@@ -85,8 +85,8 @@ public class OtherInfo extends WSActivity{
 		TextView nick = (TextView) findViewById(R.id.BuildingNick);
         nick.setText(loc.getAbbreviation());
         
-        TextView tel = (TextView) findViewById(R.id.Tele);
-        tel.setText(loc.getTelephone());
+        TextView tel = (TextView) findViewById(R.id.TeleDesc);
+        tel.setText(String.valueOf(loc.getTelephone()));
 		
 		TextView desc = (TextView) findViewById(R.id.BakerHallDes);
         desc.setText(loc.getDescription());
